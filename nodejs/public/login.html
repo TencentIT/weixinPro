@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login.html</title>
+	<style type="text/css">
+		.main{
+			border:1px solid red;
+			width:1200px;
+			height:200px;
+			margin:0 auto;
+			text-align:center;
+		}
+		.main a{
+			float:right;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h1>login.html</h1>
+		
+		<form>
+			用户名<input type="text" name="uname" id="uname"><br>
+			密码<input type="text" name="upwd" id="upwd"><br>
+			<input type="button" name="" value="登录" onclick="login()" >
+		
+		</form>
+			 
+	</div>
+
+	<script type="text/javascript">
+		function login(){
+			// window.location.href="http://localhost:3000/index.html"	
+			var uname = document.getElementById("uname").value
+			var upwd = document.getElementById("upwd").value
+			console.log(1,uname,upwd)
+			var session_uname = sessionStorage.setItem("uname",uname)
+			var session_upwd = sessionStorage.setItem("upwd",upwd)
+			if(uname=="admin" && upwd == "admin"){
+				alert("登录成功,3s后跳转")
+				setTimeout(function(){
+					
+					window.location.href="index.html"	
+				},3000)
+			}
+
+		}
+
+		function logout(){
+			sessionStorage.clear();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<view>
+    {{message}}
+</view>
+
+<view wx:if="{{app=='home'}}">
+    home
+</view>
+<view wx:for="{{rows}}" wx:key="{{index}}">
+    <!-- {{item.id}} -->
+    {{item.name}}
+    <!-- {{index}} -->
+</view>
+
+
+<!-- //跳转方式1  -->
+<navigator class="enter-item" url="/pages/news/news?id=9">
+    <text>跳转不同组件</text>
+</navigator>
+
+<view bindtap="jumpPage">
+    代码方式跳转
+</view>

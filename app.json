@@ -1,0 +1,49 @@
+{
+    "pages": [
+        "pages/detail/detail",
+        "pages/contact/contact",
+        "pages/logs/logs",
+        "pages/home/home",
+        "pages/index/index",
+        "pages/news/news"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#e8e",
+        "navigationBarTitleText": "学子商城",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "position": "bottom",
+        "color": "#000",
+        "selectedColor": "#fc0",
+        "backgroundColor": "#aaa",
+        "borderStyle": "#f00",
+        "list": [{
+                "pagePath": "pages/logs/logs",
+                "text": "首页",
+                "iconPath": "assets/tabs/home.png",
+                "selectedIconPath": "assets/tabs/home-active.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "消息",
+                "iconPath": "assets/tabs/message.png",
+                "selectedIconPath": "assets/tabs/message-active.png"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "text": "我的",
+                "iconPath": "assets/tabs/profile.png",
+                "selectedIconPath": "assets/tabs/profile-active.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "联系我们",
+                "iconPath": "assets/tabs/contact.png",
+                "selectedIconPath": "assets/tabs/contact-active.png"
+            }
+        ]
+    }
+}

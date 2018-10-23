@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index.html</title>
+	<style type="text/css">
+		.main{
+			border:1px solid red;
+			width:1200px;
+			height:200px;
+			margin:0 auto;
+			text-align:center;
+		}
+		.main a{
+			float:right;
+		}
+		#zhuxiao{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="main">
+		<h1>index.html</h1>
+		<a href="login.html" id="login_state">请登录</a> <br>
+		<a href="logout.html" onclick="logout()" id="zhuxiao">注销用户</a>
+	</div>
+
+	<script type="text/javascript">
+		var login_state = document.getElementById("login_state")
+		var uname = sessionStorage.getItem("uname")
+		var upwd = sessionStorage.getItem("upwd")
+		var zhuxiao = document.getElementById("zhuxiao")
+
+		if(sessionStorage.getItem("uname") !==null && sessionStorage.getItem("upwd")!==null){
+			login_state.innerHTML = "欢迎admin"
+			zhuxiao.style.display="block"
+
+		}else {
+			login_state.innerHTML = "请登录"
+			zhuxiao.style.display="none"
+		}
+
+		function logout(){
+			sessionStorage.clear()bc
+		}
+	</script>
+</body>
+</html>

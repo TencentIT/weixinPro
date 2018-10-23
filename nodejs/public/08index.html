@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .blue{
+            background:#ddf;
+            color:#33a; 
+        }
+        .pink{
+            background:#fdf;
+            color:#a3a; 
+        }
+        .dark{
+            background:#333;
+            color:#eee; 
+        }
+    </style>
+</head>
+<body>
+    <h1>首页</h1>
+    //下拉列表
+    <select id="myStyle">
+        <option value="blue">--请选择--</option>
+        <option value="blue">蔚蓝天空</option>
+        <option value="pink">芭比公主</option>
+        <option value="dark">暗黑主题</option>
+    </select>
+
+    <a href="09用户中心.html">去用户中心</a>
+
+    <hr>
+   
+    <script>
+       //用户选中某一个选项保存localStorage
+       var myStyle=document.getElementById("myStyle");
+       myStyle.onchange=function(){
+           var v=this.value;
+           console.log(v)
+           document.body.className=v;
+           localStorage.setItem("myStyle",v);
+       }
+       var v = localStorage.getItem("myStyle")
+       if(v){
+        document.body.className=v;
+       }
+ 
+    </script>
+</body>
+</html>

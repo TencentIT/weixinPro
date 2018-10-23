@@ -1,0 +1,72 @@
+/* 局部样式 */
+
+.slider,
+.slider image,
+.slider swiper {
+    width: 100%;
+    height: 390rpx;
+}
+
+.index-nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index-nav .nav-item {
+    height: 200rpx;
+    width: 33.333%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*列方向 垂直*/
+    flex-direction: column;
+    /*  1rpx边框重合问题 解决方案1  */
+    /* border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc; */
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+
+/* 1rpx边框重合问题 解决方案2  */
+
+
+/* 
+.index-nav .nav-item:nth-child(3n)::after {
+    border-right: 0;
+} */
+
+
+/* .index-nav .nav-item:nth-child(3n) {
+    border-right: 0;
+} */
+
+.index-nav .nav-item image {
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+}
+
+
+/* 入口样式 */
+
+.index-enter {
+    margin-top: 20rpx;
+    display: flex;
+    width: 100%;
+}
+
+.index-enter .enter-item {
+    width: 50%;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.index-enter .enter-item image {
+    width: 320rpx;
+    height: 178rpx;
+}

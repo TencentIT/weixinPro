@@ -1,0 +1,65 @@
+<!--logs.wxml 首页-->
+<!-- 图片轮播 组件尽量使用微信提供的效率好一些-->
+<view class="slider">
+    <swiper autoplay interval="3500" duration="1000" indicator-dots="false">
+        <swiper-item wx:for="{{logsImage}}" wx:key="{{index}}">
+            <!-- mode="aspectFill" 等比例缩放 -->
+            <image src="{{item.pic}}" mode="aspectFill" lazy-load width="375" height="150"></image>
+        </swiper-item>
+    </swiper>
+</view>
+
+<!-- 首页导航分区 -->
+<view class="index-nav">
+    <navigator class="nav-item bdr">
+        <image src="/assets/icons/grid-01.png"></image>
+        <text>美食</text>
+    </navigator>
+    <navigator class="nav-item bdr">
+        <image src="/assets/icons/grid-02.png"></image>
+        <text>美食</text>
+    </navigator>
+    <navigator class="nav-item">
+        <image src="/assets/icons/grid-03.png"></image>
+        <text>美食</text>
+    </navigator>
+    <navigator class="nav-item  bdr">
+        <image src="/assets/icons/grid-04.png"></image>
+        <text>美食</text>
+    </navigator>
+    <navigator class="nav-item  bdr">
+        <image src="/assets/icons/grid-05.png"></image>
+        <text>美食</text>
+    </navigator>
+    <navigator class="nav-item">
+        <image src="/assets/icons/grid-05.png"></image>
+        <text>美食</text>
+    </navigator>
+    <navigator class="nav-item  bdr">
+        <image src="/assets/icons/grid-06.png"></image>
+        <text>美食</text>
+    </navigator>
+    <navigator class="nav-item bdr">
+        <image src="/assets/icons/grid-07.png"></image>
+        <text>美食</text>
+    </navigator>
+    <navigator class="nav-item bdr">
+        <image src="/assets/icons/grid-08.png"></image>
+        <text>美食</text>
+    </navigator>
+
+    <view class="divider"></view>
+
+
+    <!-- 入口区域 -->
+    <view class="index-enter">
+        <navigator class="enter-item" url="/pages/news/news?id=9">
+            <image src="/assets/images/link-01.png"></image>
+        </navigator>
+        <navigator class="enter-item">
+            <image src="/assets/images/link-02.png"></image>
+        </navigator>
+    </view>
+
+
+</view>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户中心</title>
+	  <style>
+        .blue{
+            background:#ddf;
+            color:#33a; 
+        }
+        .pink{
+            background:#fdf;
+            color:#a3a; 
+        }
+        .dark{
+            background:#333;
+            color:#eee; 
+        }
+    </style>
+</head>
+<body>
+	<h1>用户中心</h1>
+	<script type="text/javascript">
+		 window.onstorage = function(){
+		 	 var v = localStorage.getItem("myStyle")
+			 console.log(v)
+			 document.body.className = v;
+		 }
+         
+
+	</script>
+</body>
+</html>

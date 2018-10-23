@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>websocket</title>
+</head>
+<body>
+	<h1>websocket</h1>
+	<button id="btn1">连接到ws服务器 并立即接受消息</button>
+	<button id="btn2">向服务器发一条消息</button>
+	<button id="btn3">断开连接</button>
+
+
+</body>
+
+<script type="text/javascript">
+	// 1创建全局变量保存socket
+	var ws =null;
+	// 2 获取三个按钮并添加点击事件
+	var btn1 = document.getElementById("btn1")
+	var btn2 = document.getElementById("btn2")
+	var btn3 = document.getElementById("btn3")
+
+	// 3 点击一个按钮 创建webSocket接受数据
+	btn1.onclick = function(){
+		ws =  new WebSocket("ws://127.0.0.1:9001");
+		ws.onmessage = function(e){
+			var str = e.data;
+			console.log("接收到服务器的一个消息："+str)
+		}
+	}
+	// 4 点击二个按钮 向服务器发送消息
+	btn2.onclick= function(){
+		ws.send("i am Client"+new Date().getTime())
+	}
+	// 5 点击三个按钮 关闭连接
+	btn3.onclick = function(){
+		ws.close()
+	}
+</script>
+</html>

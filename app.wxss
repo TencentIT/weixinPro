@@ -1,0 +1,47 @@
+/**app.wxss**/
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* 右侧边线 */
+
+.bdr {
+    position: relative;
+}
+
+.bdr::after {
+    content: "";
+    display: block;
+    width: 1rpx;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-right: 1px solid #ccc;
+}
+
+
+/* 通用灰色分割块 */
+
+.divider {
+    height: 20px;
+    background: #f1f1f1;
+    box-shadow: 0 5rpx 5rpx rgba(0, 0, 0, .1) inset;
+}
+
+.cell-item {
+    border-bottom: 1rpx solid #ddd;
+    padding: 20rpx 30rpx;
+}

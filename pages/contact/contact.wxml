@@ -1,0 +1,18 @@
+<!--pages/contact/contact.wxml-->
+<view class="divider"></view>
+<view class="cell">
+    <form bindsubmit="submitHandle">
+        <view class="cell-item arrow">
+            <text>添加用户信息</text>
+        </view>
+        <view class="cell-item">
+            <input type="text" name="uname" placehodler="请输入用户名"></input>
+        </view>
+        <view class="cell-item">
+            <input type="text" name="upwd" placehodler="请输入密码"></input>
+        </view>
+        <view class="cell-item">
+            <button formType="submit">注册</button>
+        </view>
+    </form>
+</view>

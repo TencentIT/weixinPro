@@ -1,0 +1,8 @@
+<!--pages/detail/detail.wxml-->
+<view>
+    <swiper autoplay duration="400" interval="3000" indicator-dots="{{true}}">
+        <swiper-item wx:for="item in imgList.img_url">
+            <image></image>
+        </swiper-item>
+    </swiper>
+</view>
